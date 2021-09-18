@@ -10,7 +10,7 @@ import transactions from './transactions.json';
 
 function App() {
   return (
-    <div>
+    <div className="container">
       <Profile
         name={userInfo.name}
         tag={userInfo.tag}

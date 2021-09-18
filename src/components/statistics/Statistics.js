@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 
-function Statistics({ title, stats }) {
+function Statistics({ title = 'Upload stats', stats }) {
   return (
     <section className="statistics">
-      {title && <h2 className="title">Upload stats</h2>}
+      {title && <h2 className="title">{title}</h2>}
 
       <ul className="stat-list">
         {stats.map(stat => (
