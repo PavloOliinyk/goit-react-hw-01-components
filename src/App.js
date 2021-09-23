@@ -1,12 +1,12 @@
-import Profile from './components/profile/Profile';
-import Statistics from './components/statistics/Statistics';
-import FriendList from './components/friend-list/FriendList';
-import FriendListItem from './components/friend-list/FriendListItem';
-import TransactionHistory from './components/transaction-history/TransactionHistory';
-import userInfo from './user.json';
-import statisticalData from './statistical-data.json';
-import friends from './friends.json';
-import transactions from './transactions.json';
+import Profile from "./components/profile/Profile";
+import Statistics from "./components/statistics/Statistics";
+import FriendList from "./components/friend-list/FriendList";
+import FriendListItem from "./components/friend-list/FriendListItem";
+import TransactionHistory from "./components/transaction-history/TransactionHistory";
+import userInfo from "./user.json";
+import statisticalData from "./statistical-data.json";
+import friends from "./friends.json";
+import transactions from "./transactions.json";
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
       />
       <Statistics stats={statisticalData} />
       <FriendList>
-        {friends.map(friend => (
+        {friends.map((friend) => (
           <FriendListItem
             key={friend.id}
             avatar={friend.avatar}
