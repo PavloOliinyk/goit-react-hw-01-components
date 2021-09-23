@@ -10,7 +10,6 @@
 }
 
 .avatar {
-  background-image: url("./errorIcon.svg");
   width: 125px;
   height: 125px;
   border-radius: 50%;

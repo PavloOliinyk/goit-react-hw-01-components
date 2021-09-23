@@ -1,11 +1,20 @@
-import PropTypes from "prop-types";
-import s from "./Profile.module.css";
+import PropTypes from 'prop-types';
+import s from './Profile.module.css';
+import error from './error.png';
 
 function Profile({ name, tag, location, avatar, stats }) {
   return (
     <div className={s.profile}>
       <div className={s.description}>
-        <img src={avatar} alt={name} className={s.avatar} />
+        <img
+          src={avatar}
+          onError={e => {
+            e.target.onerror = null;
+            e.target.src = error;
+          }}
+          alt="Аватар пользователя"
+          className={s.avatar}
+        />
         <p className={s.name}>{name}</p>
         <p className={s.tag}>@{tag}</p>
         <p className={s.location}>{location}</p>
@@ -34,11 +43,7 @@ Profile.propTypes = {
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   avatar: PropTypes.string.isRequired,
-  stats: PropTypes.objectOf(PropTypes.number).isRequired
-};
-
-Profile.defaultProps = {
-  avatar: "./error.png"
+  stats: PropTypes.objectOf(PropTypes.number).isRequired,
 };
 
 export default Profile;
