@@ -1,8 +1,10 @@
 .statistics {
-  text-align: center;
-  background-color: #fff;
   margin-bottom: 30px;
   padding: 15px;
+
+  text-align: center;
+
+  background-color: #fff;
 }
 
 .title {
@@ -16,11 +18,12 @@
 
 .item {
   display: flex;
-  flex-direction: column;
-  padding: 15px;
-  /* background-color: aliceblue; */
-  /* border: 1px solid black; */
   flex-basis: calc(100% / 5);
+  flex-direction: column;
+
+  padding: 15px;
+
+  color: aliceblue;
 }
 
 .percentage {
