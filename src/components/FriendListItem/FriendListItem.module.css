@@ -1,0 +1,42 @@
+.item {
+  display: flex;
+  align-items: center;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  margin-bottom: 10px;
+  min-height: 70px;
+  padding: 15px 20px;
+  background-color: #fff;
+}
+
+.status {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+
+  border-radius: 50%;
+  background-color: #000000;
+  margin-right: 15px;
+}
+
+.avatar {
+  background-color: grey;
+  border-radius: 5px;
+  width: 125px;
+  height: 125px;
+  margin-right: 15px;
+}
+
+.name {
+  font-size: 30px;
+  font-weight: semi-bold;
+}
+
+.active {
+  composes: status;
+  background-color: green;
+}
+
+.offline {
+  composes: status;
+  background-color: red;
+}
